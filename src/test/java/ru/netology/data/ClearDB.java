@@ -27,6 +27,6 @@ public class ClearDB {
 
     @SneakyThrows
     public static void deleteAuthCode() {
-        runn.update(conn, "TRUNCATE auth_codes;");
+        runn.execute(conn, "TRUNCATE auth_codes;");
     }
 }
