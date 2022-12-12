@@ -10,8 +10,7 @@ import ru.netology.data.DataHelper;
 import ru.netology.page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static ru.netology.data.Checks.invalidCode;
-import static ru.netology.data.Checks.personalAccount;
+import static ru.netology.data.Checks.*;
 import static ru.netology.data.ClearDB.deleteAuthCode;
 import static ru.netology.data.ClearDB.deleteDataBase;
 
@@ -64,7 +63,7 @@ public class DeadlineTest {
         var dashboardPage = verificationPage.notValidVerify(verificationCode);
         var dashboardPage1 = verificationPage.notValidVerify(verificationCode);
         var dashboardPage2 = verificationPage.notValidVerify(verificationCode);
-        invalidCode();
+        blockedProfile();
     }
 
 }
